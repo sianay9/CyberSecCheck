@@ -123,5 +123,5 @@ with col3:
 
 
 
-if st.button("START ASSESSMENT  →"):
+if st.button("NEXT  →"):
     st.switch_page("pages/intro.py")

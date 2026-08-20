@@ -1,7 +1,10 @@
 /* =========================================================
    CYBERSEC CHECK
-   Streamlit Theme
+   Global Streamlit Theme
    Y2K Cyber / Black & Green Edition
+
+   ONE GLOBAL STYLESHEET
+   Used by app.py and all pages in /pages/
    ========================================================= */
 
 
@@ -17,25 +20,35 @@
    ========================================================= */
 
 :root {
+
     --background: #050805;
+
     --surface: #0b100c;
+
     --surface-light: #101810;
 
     --foreground: #e6f4e8;
+
     --text: #d8e8da;
+
     --text-muted: #7f9382;
 
     --primary: #39ff88;
+
     --primary-dark: #20d96b;
 
     --secondary: #00c853;
+
     --accent: #8cff00;
 
     --success: #39ff88;
+
     --warning: #ffc857;
+
     --danger: #ff4d6d;
 
     --border: #18251b;
+
     --border-primary: rgba(57, 255, 136, 0.30);
 
     --radius: 0.5rem;
@@ -79,16 +92,19 @@
    ========================================================= */
 
 .stApp {
+
     background-color: var(--background);
 
     color: var(--foreground);
 
     background-image:
+
         radial-gradient(
             ellipse 80% 50% at 50% -10%,
             rgba(57, 255, 136, 0.08),
             transparent
         ),
+
         radial-gradient(
             ellipse 60% 50% at 80% 100%,
             rgba(0, 200, 83, 0.06),
@@ -104,6 +120,7 @@
    ========================================================= */
 
 .stApp::before {
+
     content: "";
 
     position: fixed;
@@ -113,10 +130,12 @@
     pointer-events: none;
 
     background-image:
+
         linear-gradient(
             rgba(57, 255, 136, 0.035) 1px,
             transparent 1px
         ),
+
         linear-gradient(
             90deg,
             rgba(57, 255, 136, 0.035) 1px,
@@ -134,6 +153,7 @@
    ========================================================= */
 
 .block-container {
+
     position: relative;
 
     z-index: 1;
@@ -171,6 +191,7 @@ h1,
 h2,
 h3,
 h4 {
+
     font-family: var(--font-heading);
 
     color: var(--foreground);
@@ -178,25 +199,23 @@ h4 {
     font-weight: 600;
 }
 
-
 h1 {
+
     font-size: 2.5rem;
 
     letter-spacing: -0.03em;
 }
 
-
 h2 {
     font-size: 1.8rem;
 }
-
 
 h3 {
     font-size: 1.25rem;
 }
 
-
 p {
+
     font-family: var(--font-body);
 
     color: var(--foreground);
@@ -204,13 +223,12 @@ p {
     line-height: 1.7;
 }
 
-
 .small-text {
+
     color: var(--text-muted);
 
     font-size: 0.85rem;
 }
-
 
 .mono {
     font-family: var(--font-mono);
@@ -222,9 +240,11 @@ p {
    ========================================================= */
 
 .hero {
+
     position: relative;
 
     background:
+
         linear-gradient(
             135deg,
             rgba(57, 255, 136, 0.07),
@@ -251,14 +271,17 @@ p {
 /* Green glow */
 
 .hero::before {
+
     content: "";
 
     position: absolute;
 
     width: 350px;
+
     height: 350px;
 
     top: -220px;
+
     left: 35%;
 
     background: rgba(57, 255, 136, 0.08);
@@ -276,6 +299,7 @@ p {
    ========================================================= */
 
 .hero-title {
+
     position: relative;
 
     font-family: var(--font-heading);
@@ -291,12 +315,14 @@ p {
     margin-bottom: 1rem;
 
     text-shadow:
+
         0 0 10px rgba(57, 255, 136, 0.5),
+
         0 0 20px rgba(57, 255, 136, 0.3);
 }
 
-
 .hero-subtitle {
+
     position: relative;
 
     font-family: var(--font-body);
@@ -310,6 +336,7 @@ p {
     max-width: 700px;
 
     margin-left: auto;
+
     margin-right: auto;
 }
 
@@ -319,6 +346,7 @@ p {
    ========================================================= */
 
 .cyber-card {
+
     background:
         rgba(11, 16, 12, 0.82);
 
@@ -341,8 +369,8 @@ p {
     text-align: center;
 }
 
-
 .cyber-card:hover {
+
     border-color: var(--border-primary);
 
     box-shadow: var(--neon-shadow);
@@ -354,6 +382,7 @@ p {
    ========================================================= */
 
 .welcome-card {
+
     background:
         rgba(11, 16, 12, 0.82);
 
@@ -374,15 +403,15 @@ p {
     text-align: center;
 }
 
-
 .welcome-card h2 {
+
     margin-top: 0;
 
     color: var(--foreground);
 }
 
-
 .welcome-card p {
+
     color: var(--text-muted);
 }
 
@@ -392,6 +421,7 @@ p {
    ========================================================= */
 
 .section-heading {
+
     margin-top: 2.5rem;
 
     margin-bottom: 1.5rem;
@@ -399,15 +429,15 @@ p {
     text-align: center;
 }
 
-
 .section-heading h2 {
+
     color: var(--foreground);
 
     margin-bottom: 0.5rem;
 }
 
-
 .section-heading p {
+
     color: var(--text-muted);
 }
 
@@ -417,6 +447,7 @@ p {
    ========================================================= */
 
 .feature-card {
+
     height: 100%;
 
     min-height: 220px;
@@ -444,8 +475,8 @@ p {
     text-align: center;
 }
 
-
 .feature-card:hover {
+
     transform: translateY(-2px);
 
     border-color: var(--border-primary);
@@ -453,22 +484,22 @@ p {
     box-shadow: var(--neon-shadow);
 }
 
-
 .feature-icon {
+
     font-size: 2rem;
 
     margin-bottom: 1rem;
 }
 
-
 .feature-card h3 {
+
     color: var(--foreground);
 
     margin-bottom: 0.75rem;
 }
 
-
 .feature-card p {
+
     color: var(--text-muted);
 
     font-size: 0.9rem;
@@ -481,33 +512,37 @@ p {
    START ASSESSMENT BUTTON
    ========================================================= */
 
-/* Centre the Streamlit button container */
 .stButton {
+
     width: 100% !important;
+
     display: flex !important;
+
     justify-content: center !important;
+
     align-items: center !important;
 
     margin: 2rem 0 !important;
 }
 
-
-/* Centre Streamlit's internal containers */
 .stButton > div,
 .stButton > div > div {
+
     width: 100% !important;
 
     display: flex !important;
+
     justify-content: center !important;
+
     align-items: center !important;
 }
 
-
-/* The actual button */
 .stButton button {
+
     display: block !important;
 
     width: auto !important;
+
     min-width: 230px !important;
 
     min-height: 50px !important;
@@ -533,23 +568,31 @@ p {
     border-radius: var(--radius) !important;
 
     box-shadow:
+
         0 0 0 1px rgba(57, 255, 136, 0.08),
+
         0 0 12px rgba(57, 255, 136, 0.08) !important;
 
     transition:
+
         background 0.25s ease,
+
         color 0.25s ease,
+
         border-color 0.25s ease,
+
         box-shadow 0.25s ease,
+
         transform 0.2s ease !important;
 }
 
 
 /* =========================================================
-   HOVER
+   BUTTON HOVER
    ========================================================= */
 
 .stButton button:hover {
+
     background: var(--primary) !important;
 
     color: #050805 !important;
@@ -559,24 +602,27 @@ p {
     transform: translateY(-2px) !important;
 
     box-shadow:
+
         0 0 10px rgba(57, 255, 136, 0.5),
+
         0 0 25px rgba(57, 255, 136, 0.3),
+
         0 0 45px rgba(57, 255, 136, 0.12) !important;
 }
 
-
-/* Streamlit sometimes puts the button text inside a <p> */
 .stButton button:hover p,
 .stButton button:hover span {
+
     color: #050805 !important;
 }
 
 
 /* =========================================================
-   ACTIVE / CLICK
+   BUTTON ACTIVE
    ========================================================= */
 
 .stButton button:active {
+
     transform: translateY(0) !important;
 
     background: var(--primary-dark) !important;
@@ -586,16 +632,19 @@ p {
 
 
 /* =========================================================
-   KEYBOARD FOCUS
+   BUTTON FOCUS
    ========================================================= */
 
 .stButton button:focus-visible {
+
     outline: 2px solid var(--primary) !important;
 
     outline-offset: 3px !important;
 
     box-shadow:
+
         0 0 10px rgba(57, 255, 136, 0.5),
+
         0 0 25px rgba(57, 255, 136, 0.25) !important;
 }
 
@@ -605,19 +654,22 @@ p {
    ========================================================= */
 
 button[kind="primary"] {
+
     background: var(--primary);
 
     color: var(--background);
 }
 
-
 button[kind="primary"]:hover {
+
     background: var(--primary);
 
     color: var(--background);
 
     box-shadow:
+
         0 0 15px rgba(57, 255, 136, 0.45),
+
         0 0 30px rgba(57, 255, 136, 0.15);
 }
 
@@ -627,6 +679,7 @@ button[kind="primary"]:hover {
    ========================================================= */
 
 .info-panel {
+
     background:
         rgba(57, 255, 136, 0.05);
 
@@ -643,8 +696,8 @@ button[kind="primary"]:hover {
     text-align: center;
 }
 
-
 .info-panel p {
+
     color: var(--text-muted);
 
     margin: 0;
@@ -656,6 +709,7 @@ button[kind="primary"]:hover {
    ========================================================= */
 
 .question-card {
+
     background:
         rgba(11, 16, 12, 0.82);
 
@@ -674,8 +728,8 @@ button[kind="primary"]:hover {
     text-align: center;
 }
 
-
 .question-number {
+
     font-family: var(--font-mono);
 
     color: var(--primary);
@@ -697,6 +751,7 @@ button[kind="primary"]:hover {
    ========================================================= */
 
 .recommendation-card {
+
     background:
         rgba(11, 16, 12, 0.82);
 
@@ -711,18 +766,18 @@ button[kind="primary"]:hover {
     box-shadow: var(--shadow);
 }
 
-
 .recommendation-high {
+
     border-left: 4px solid var(--danger);
 }
 
-
 .recommendation-medium {
+
     border-left: 4px solid var(--warning);
 }
 
-
 .recommendation-low {
+
     border-left: 4px solid var(--success);
 }
 
@@ -732,6 +787,7 @@ button[kind="primary"]:hover {
    ========================================================= */
 
 .status-badge {
+
     display: inline-block;
 
     padding: 0.25rem 0.65rem;
@@ -745,29 +801,29 @@ button[kind="primary"]:hover {
     font-weight: 500;
 }
 
-
 .status-not-started {
+
     background: rgba(127, 147, 130, 0.12);
 
     color: var(--text-muted);
 }
 
-
 .status-in-progress {
+
     background: rgba(255, 200, 87, 0.12);
 
     color: var(--warning);
 }
 
-
 .status-completed {
+
     background: rgba(57, 255, 136, 0.12);
 
     color: var(--success);
 }
 
-
 .status-locked {
+
     background: rgba(127, 147, 130, 0.08);
 
     color: var(--text-muted);
@@ -779,6 +835,7 @@ button[kind="primary"]:hover {
    ========================================================= */
 
 .framework-reference {
+
     font-family: var(--font-mono);
 
     color: #596b5c;
@@ -788,8 +845,8 @@ button[kind="primary"]:hover {
     margin-top: 0.5rem;
 }
 
-
 .framework-name {
+
     color: #718875;
 
     text-decoration: underline;
@@ -805,6 +862,7 @@ button[kind="primary"]:hover {
    ========================================================= */
 
 .glossary-term {
+
     color: var(--primary);
 
     font-weight: 500;
@@ -820,6 +878,7 @@ button[kind="primary"]:hover {
    ========================================================= */
 
 .start-section {
+
     text-align: center;
 
     margin-top: 3rem;
@@ -827,14 +886,226 @@ button[kind="primary"]:hover {
     margin-bottom: 1rem;
 }
 
-
 .start-section h2 {
+
     color: var(--foreground);
 }
 
-
 .start-section p {
+
     color: var(--text-muted);
+}
+
+
+/* =========================================================
+   INTRODUCTION PAGE
+   ========================================================= */
+
+.intro-hero {
+    text-align: center;
+    max-width: 850px;
+    margin: 0 auto 1.5rem auto;
+}
+
+.intro-hero h1 {
+    color: var(--primary);
+    font-size: 2.6rem;
+    margin-bottom: 0.5rem;
+}
+
+.intro-hero p {
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   STATISTIC CARDS
+   ========================================================= */
+
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 1.25rem 0 1.5rem 0;
+}
+
+.stat-card {
+    background: rgba(11, 16, 12, 0.82);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.25rem 1rem;
+    text-align: center;
+    min-height: 155px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    box-shadow: var(--shadow);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--border-primary);
+    box-shadow: var(--neon-shadow);
+}
+
+.stat-number {
+    color: var(--primary);
+    font-family: var(--font-mono);
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 0.6rem;
+
+    text-shadow:
+        0 0 10px rgba(57, 255, 136, 0.5),
+        0 0 20px rgba(57, 255, 136, 0.25);
+}
+
+.stat-title {
+    color: var(--foreground);
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+}
+
+.stat-description {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    line-height: 1.4;
+}
+
+.stat-source {
+    color: #596b5c;
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    margin-top: 0.5rem;
+}
+
+
+/* =========================================================
+   WHY CYBERSEC CHECK
+   ========================================================= */
+
+.intro-info {
+    max-width: 900px;
+    margin: 0 auto 1.25rem auto;
+
+    background: rgba(11, 16, 12, 0.82);
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+
+    padding: 1.25rem 1.75rem;
+
+    box-shadow: var(--shadow);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.intro-info h2 {
+    color: var(--primary);
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0.6rem;
+}
+
+.intro-info p {
+    color: var(--text-muted);
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+}
+
+
+/* =========================================================
+   DISCLAIMER
+   ========================================================= */
+
+.intro-disclaimer {
+    max-width: 900px;
+
+    margin: 1.25rem auto;
+
+    background: rgba(35, 25, 5, 0.7);
+
+    border: 1px solid rgba(255, 190, 60, 0.35);
+    border-left: 4px solid #ffbf3f;
+
+    border-radius: 12px;
+
+    padding: 1rem 1.5rem;
+
+    box-shadow:
+        0 0 20px rgba(255, 190, 60, 0.05);
+}
+
+.intro-disclaimer h3 {
+    color: #ffbf3f;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.intro-disclaimer p {
+    color: #d8d0bd;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin-bottom: 0.4rem;
+}
+
+
+/* =========================================================
+   INTRO START BUTTON
+   ========================================================= */
+
+.intro-start {
+    display: flex;
+    justify-content: center;
+    margin: 1.5rem 0 0.5rem 0;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .stats-container {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+        margin: 1rem 0 1.25rem 0;
+    }
+
+    .stat-card {
+        min-height: auto;
+        padding: 1.25rem 1rem;
+    }
+
+    .intro-info,
+    .intro-disclaimer {
+        padding: 1.1rem 1.25rem;
+    }
+
+    .intro-hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .intro-hero p {
+        font-size: 0.95rem;
+    }
 }
 
 
@@ -843,11 +1114,12 @@ button[kind="primary"]:hover {
    ========================================================= */
 
 [data-testid="stMarkdownContainer"] {
+
     text-align: center;
 }
 
-
 [data-testid="stText"] {
+
     text-align: center;
 }
 
@@ -857,18 +1129,19 @@ button[kind="primary"]:hover {
    ========================================================= */
 
 ::-webkit-scrollbar {
+
     width: 10px;
 
     height: 10px;
 }
 
-
 ::-webkit-scrollbar-track {
+
     background: var(--background);
 }
 
-
 ::-webkit-scrollbar-thumb {
+
     background: #18251b;
 
     border-radius: 5px;
@@ -876,8 +1149,8 @@ button[kind="primary"]:hover {
     border: 2px solid var(--background);
 }
 
-
 ::-webkit-scrollbar-thumb:hover {
+
     background: rgba(57, 255, 136, 0.5);
 }
 
@@ -889,6 +1162,7 @@ button[kind="primary"]:hover {
 @media (max-width: 768px) {
 
     .block-container {
+
         padding-left: 1rem;
 
         padding-right: 1rem;
@@ -896,30 +1170,46 @@ button[kind="primary"]:hover {
         padding-top: 1.5rem;
     }
 
-
     .hero {
+
         padding: 2.5rem 1.5rem;
     }
 
-
     .hero-title {
+
         font-size: 2.3rem;
     }
 
-
     .hero-subtitle {
+
         font-size: 1rem;
     }
 
-
     .welcome-card {
+
         padding: 1.5rem;
     }
 
-
     .feature-card {
+
         min-height: auto;
 
         margin-bottom: 1rem;
+    }
+
+    .stats-container {
+
+        grid-template-columns: 1fr;
+    }
+
+    .intro-info,
+    .intro-disclaimer {
+
+        padding: 1.25rem;
+    }
+
+    .intro-hero h1 {
+
+        font-size: 2.2rem;
     }
 }
