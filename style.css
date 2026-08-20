@@ -1,0 +1,925 @@
+/* =========================================================
+   CYBERSEC CHECK
+   Streamlit Theme
+   Y2K Cyber / Black & Green Edition
+   ========================================================= */
+
+
+/* =========================================================
+   GOOGLE FONTS
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+
+/* =========================================================
+   COLOUR PALETTE
+   ========================================================= */
+
+:root {
+    --background: #050805;
+    --surface: #0b100c;
+    --surface-light: #101810;
+
+    --foreground: #e6f4e8;
+    --text: #d8e8da;
+    --text-muted: #7f9382;
+
+    --primary: #39ff88;
+    --primary-dark: #20d96b;
+
+    --secondary: #00c853;
+    --accent: #8cff00;
+
+    --success: #39ff88;
+    --warning: #ffc857;
+    --danger: #ff4d6d;
+
+    --border: #18251b;
+    --border-primary: rgba(57, 255, 136, 0.30);
+
+    --radius: 0.5rem;
+
+    --shadow:
+        0 4px 20px rgba(0, 0, 0, 0.45);
+
+    --neon-shadow:
+        0 0 0 1px rgba(57, 255, 136, 0.30),
+        0 0 15px rgba(57, 255, 136, 0.15);
+
+    --neon-shadow-hover:
+        0 0 0 1px rgba(57, 255, 136, 0.50),
+        0 0 20px rgba(57, 255, 136, 0.25);
+
+    --font-heading:
+        'Space Grotesk',
+        ui-sans-serif,
+        system-ui,
+        sans-serif;
+
+    --font-body:
+        'Inter',
+        ui-sans-serif,
+        system-ui,
+        sans-serif;
+
+    --font-mono:
+        'JetBrains Mono',
+        ui-monospace,
+        SFMono-Regular,
+        Menlo,
+        Monaco,
+        Consolas,
+        monospace;
+}
+
+
+/* =========================================================
+   STREAMLIT APPLICATION
+   ========================================================= */
+
+.stApp {
+    background-color: var(--background);
+
+    color: var(--foreground);
+
+    background-image:
+        radial-gradient(
+            ellipse 80% 50% at 50% -10%,
+            rgba(57, 255, 136, 0.08),
+            transparent
+        ),
+        radial-gradient(
+            ellipse 60% 50% at 80% 100%,
+            rgba(0, 200, 83, 0.06),
+            transparent
+        );
+
+    background-attachment: fixed;
+}
+
+
+/* =========================================================
+   GRID BACKGROUND
+   ========================================================= */
+
+.stApp::before {
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background-image:
+        linear-gradient(
+            rgba(57, 255, 136, 0.035) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(57, 255, 136, 0.035) 1px,
+            transparent 1px
+        );
+
+    background-size: 32px 32px;
+
+    z-index: 0;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
+
+.block-container {
+    position: relative;
+
+    z-index: 1;
+
+    max-width: 1150px;
+
+    padding-top: 2rem;
+
+    padding-bottom: 4rem;
+}
+
+
+/* =========================================================
+   STREAMLIT UI CLEAN-UP
+   ========================================================= */
+
+#MainMenu {
+    visibility: hidden;
+}
+
+footer {
+    visibility: hidden;
+}
+
+header {
+    background: transparent;
+}
+
+
+/* =========================================================
+   TYPOGRAPHY
+   ========================================================= */
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--font-heading);
+
+    color: var(--foreground);
+
+    font-weight: 600;
+}
+
+
+h1 {
+    font-size: 2.5rem;
+
+    letter-spacing: -0.03em;
+}
+
+
+h2 {
+    font-size: 1.8rem;
+}
+
+
+h3 {
+    font-size: 1.25rem;
+}
+
+
+p {
+    font-family: var(--font-body);
+
+    color: var(--foreground);
+
+    line-height: 1.7;
+}
+
+
+.small-text {
+    color: var(--text-muted);
+
+    font-size: 0.85rem;
+}
+
+
+.mono {
+    font-family: var(--font-mono);
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+    position: relative;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(57, 255, 136, 0.07),
+            rgba(11, 16, 12, 0.95) 50%,
+            rgba(0, 200, 83, 0.04)
+        );
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    padding: 4rem 3rem;
+
+    margin-bottom: 2rem;
+
+    overflow: hidden;
+
+    box-shadow: var(--shadow);
+
+    text-align: center;
+}
+
+
+/* Green glow */
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    top: -220px;
+    left: 35%;
+
+    background: rgba(57, 255, 136, 0.08);
+
+    border-radius: 50%;
+
+    filter: blur(80px);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   HERO TEXT
+   ========================================================= */
+
+.hero-title {
+    position: relative;
+
+    font-family: var(--font-heading);
+
+    font-size: 3.5rem;
+
+    font-weight: 700;
+
+    letter-spacing: -0.04em;
+
+    color: var(--foreground);
+
+    margin-bottom: 1rem;
+
+    text-shadow:
+        0 0 10px rgba(57, 255, 136, 0.5),
+        0 0 20px rgba(57, 255, 136, 0.3);
+}
+
+
+.hero-subtitle {
+    position: relative;
+
+    font-family: var(--font-body);
+
+    color: var(--text-muted);
+
+    font-size: 1.1rem;
+
+    line-height: 1.7;
+
+    max-width: 700px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =========================================================
+   CYBER CARD
+   ========================================================= */
+
+.cyber-card {
+    background:
+        rgba(11, 16, 12, 0.82);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    padding: 1.75rem;
+
+    box-shadow: var(--shadow);
+
+    backdrop-filter: blur(12px);
+
+    -webkit-backdrop-filter: blur(12px);
+
+    transition:
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+
+    text-align: center;
+}
+
+
+.cyber-card:hover {
+    border-color: var(--border-primary);
+
+    box-shadow: var(--neon-shadow);
+}
+
+
+/* =========================================================
+   WELCOME CARD
+   ========================================================= */
+
+.welcome-card {
+    background:
+        rgba(11, 16, 12, 0.82);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    padding: 2rem;
+
+    margin-bottom: 2rem;
+
+    box-shadow: var(--shadow);
+
+    backdrop-filter: blur(12px);
+
+    -webkit-backdrop-filter: blur(12px);
+
+    text-align: center;
+}
+
+
+.welcome-card h2 {
+    margin-top: 0;
+
+    color: var(--foreground);
+}
+
+
+.welcome-card p {
+    color: var(--text-muted);
+}
+
+
+/* =========================================================
+   SECTION HEADINGS
+   ========================================================= */
+
+.section-heading {
+    margin-top: 2.5rem;
+
+    margin-bottom: 1.5rem;
+
+    text-align: center;
+}
+
+
+.section-heading h2 {
+    color: var(--foreground);
+
+    margin-bottom: 0.5rem;
+}
+
+
+.section-heading p {
+    color: var(--text-muted);
+}
+
+
+/* =========================================================
+   FEATURE CARDS
+   ========================================================= */
+
+.feature-card {
+    height: 100%;
+
+    min-height: 220px;
+
+    background:
+        rgba(11, 16, 12, 0.75);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    padding: 1.75rem;
+
+    box-shadow: var(--shadow);
+
+    backdrop-filter: blur(12px);
+
+    -webkit-backdrop-filter: blur(12px);
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.2s ease;
+
+    text-align: center;
+}
+
+
+.feature-card:hover {
+    transform: translateY(-2px);
+
+    border-color: var(--border-primary);
+
+    box-shadow: var(--neon-shadow);
+}
+
+
+.feature-icon {
+    font-size: 2rem;
+
+    margin-bottom: 1rem;
+}
+
+
+.feature-card h3 {
+    color: var(--foreground);
+
+    margin-bottom: 0.75rem;
+}
+
+
+.feature-card p {
+    color: var(--text-muted);
+
+    font-size: 0.9rem;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   START ASSESSMENT BUTTON
+   ========================================================= */
+
+/* Centre the Streamlit button container */
+.stButton {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+
+    margin: 2rem 0 !important;
+}
+
+
+/* Centre Streamlit's internal containers */
+.stButton > div,
+.stButton > div > div {
+    width: 100% !important;
+
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+
+/* The actual button */
+.stButton button {
+    display: block !important;
+
+    width: auto !important;
+    min-width: 230px !important;
+
+    min-height: 50px !important;
+
+    margin: 0 auto !important;
+
+    padding: 0.85rem 2.4rem !important;
+
+    font-family: var(--font-heading) !important;
+
+    font-size: 1rem !important;
+
+    font-weight: 600 !important;
+
+    letter-spacing: 0.04em !important;
+
+    background: transparent !important;
+
+    color: var(--primary) !important;
+
+    border: 1px solid var(--primary) !important;
+
+    border-radius: var(--radius) !important;
+
+    box-shadow:
+        0 0 0 1px rgba(57, 255, 136, 0.08),
+        0 0 12px rgba(57, 255, 136, 0.08) !important;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.2s ease !important;
+}
+
+
+/* =========================================================
+   HOVER
+   ========================================================= */
+
+.stButton button:hover {
+    background: var(--primary) !important;
+
+    color: #050805 !important;
+
+    border-color: var(--primary) !important;
+
+    transform: translateY(-2px) !important;
+
+    box-shadow:
+        0 0 10px rgba(57, 255, 136, 0.5),
+        0 0 25px rgba(57, 255, 136, 0.3),
+        0 0 45px rgba(57, 255, 136, 0.12) !important;
+}
+
+
+/* Streamlit sometimes puts the button text inside a <p> */
+.stButton button:hover p,
+.stButton button:hover span {
+    color: #050805 !important;
+}
+
+
+/* =========================================================
+   ACTIVE / CLICK
+   ========================================================= */
+
+.stButton button:active {
+    transform: translateY(0) !important;
+
+    background: var(--primary-dark) !important;
+
+    color: #050805 !important;
+}
+
+
+/* =========================================================
+   KEYBOARD FOCUS
+   ========================================================= */
+
+.stButton button:focus-visible {
+    outline: 2px solid var(--primary) !important;
+
+    outline-offset: 3px !important;
+
+    box-shadow:
+        0 0 10px rgba(57, 255, 136, 0.5),
+        0 0 25px rgba(57, 255, 136, 0.25) !important;
+}
+
+
+/* =========================================================
+   PRIMARY BUTTON
+   ========================================================= */
+
+button[kind="primary"] {
+    background: var(--primary);
+
+    color: var(--background);
+}
+
+
+button[kind="primary"]:hover {
+    background: var(--primary);
+
+    color: var(--background);
+
+    box-shadow:
+        0 0 15px rgba(57, 255, 136, 0.45),
+        0 0 30px rgba(57, 255, 136, 0.15);
+}
+
+
+/* =========================================================
+   INFORMATION PANEL
+   ========================================================= */
+
+.info-panel {
+    background:
+        rgba(57, 255, 136, 0.05);
+
+    border: 1px solid rgba(57, 255, 136, 0.18);
+
+    border-left: 3px solid var(--primary);
+
+    border-radius: var(--radius);
+
+    padding: 1rem 1.25rem;
+
+    margin: 1rem 0;
+
+    text-align: center;
+}
+
+
+.info-panel p {
+    color: var(--text-muted);
+
+    margin: 0;
+}
+
+
+/* =========================================================
+   ASSESSMENT QUESTIONS
+   ========================================================= */
+
+.question-card {
+    background:
+        rgba(11, 16, 12, 0.82);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    padding: 1.75rem;
+
+    margin-bottom: 1.25rem;
+
+    box-shadow: var(--shadow);
+
+    backdrop-filter: blur(12px);
+
+    text-align: center;
+}
+
+
+.question-number {
+    font-family: var(--font-mono);
+
+    color: var(--primary);
+
+    font-size: 0.75rem;
+
+    font-weight: 500;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.08em;
+
+    margin-bottom: 0.5rem;
+}
+
+
+/* =========================================================
+   RECOMMENDATIONS
+   ========================================================= */
+
+.recommendation-card {
+    background:
+        rgba(11, 16, 12, 0.82);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    padding: 1.5rem;
+
+    margin-bottom: 1rem;
+
+    box-shadow: var(--shadow);
+}
+
+
+.recommendation-high {
+    border-left: 4px solid var(--danger);
+}
+
+
+.recommendation-medium {
+    border-left: 4px solid var(--warning);
+}
+
+
+.recommendation-low {
+    border-left: 4px solid var(--success);
+}
+
+
+/* =========================================================
+   STATUS BADGES
+   ========================================================= */
+
+.status-badge {
+    display: inline-block;
+
+    padding: 0.25rem 0.65rem;
+
+    border-radius: 999px;
+
+    font-family: var(--font-mono);
+
+    font-size: 0.7rem;
+
+    font-weight: 500;
+}
+
+
+.status-not-started {
+    background: rgba(127, 147, 130, 0.12);
+
+    color: var(--text-muted);
+}
+
+
+.status-in-progress {
+    background: rgba(255, 200, 87, 0.12);
+
+    color: var(--warning);
+}
+
+
+.status-completed {
+    background: rgba(57, 255, 136, 0.12);
+
+    color: var(--success);
+}
+
+
+.status-locked {
+    background: rgba(127, 147, 130, 0.08);
+
+    color: var(--text-muted);
+}
+
+
+/* =========================================================
+   FRAMEWORK REFERENCES
+   ========================================================= */
+
+.framework-reference {
+    font-family: var(--font-mono);
+
+    color: #596b5c;
+
+    font-size: 0.7rem;
+
+    margin-top: 0.5rem;
+}
+
+
+.framework-name {
+    color: #718875;
+
+    text-decoration: underline;
+
+    text-decoration-style: dotted;
+
+    cursor: help;
+}
+
+
+/* =========================================================
+   GLOSSARY
+   ========================================================= */
+
+.glossary-term {
+    color: var(--primary);
+
+    font-weight: 500;
+
+    border-bottom: 1px dotted var(--primary);
+
+    cursor: help;
+}
+
+
+/* =========================================================
+   START SECTION
+   ========================================================= */
+
+.start-section {
+    text-align: center;
+
+    margin-top: 3rem;
+
+    margin-bottom: 1rem;
+}
+
+
+.start-section h2 {
+    color: var(--foreground);
+}
+
+
+.start-section p {
+    color: var(--text-muted);
+}
+
+
+/* =========================================================
+   STREAMLIT TEXT ELEMENTS
+   ========================================================= */
+
+[data-testid="stMarkdownContainer"] {
+    text-align: center;
+}
+
+
+[data-testid="stText"] {
+    text-align: center;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+::-webkit-scrollbar {
+    width: 10px;
+
+    height: 10px;
+}
+
+
+::-webkit-scrollbar-track {
+    background: var(--background);
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: #18251b;
+
+    border-radius: 5px;
+
+    border: 2px solid var(--background);
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(57, 255, 136, 0.5);
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .block-container {
+        padding-left: 1rem;
+
+        padding-right: 1rem;
+
+        padding-top: 1.5rem;
+    }
+
+
+    .hero {
+        padding: 2.5rem 1.5rem;
+    }
+
+
+    .hero-title {
+        font-size: 2.3rem;
+    }
+
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+
+    .welcome-card {
+        padding: 1.5rem;
+    }
+
+
+    .feature-card {
+        min-height: auto;
+
+        margin-bottom: 1rem;
+    }
+}
